@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Meus parabens Filho da pulta</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+
+	<script>
+		function iniciarJogo() {
+			var nivel = document.getElementById('nivel').value
+
+		if (nivel === '') {
+			alert('Selecione um nivel Burrão')
+			return false
+		}
+
+		window.location.href = 'index.html?' + nivel // o "?" separa o href do parametro que desejamos enviar
+		}
+	</script>
+</head>
+<body>
+
+	<div class="container">
+		
+		<div class="row">
+			<div class="col">
+				<div class="d-flex justify-content-center">
+				<img src="imagens/game.png" />
+				</div>			
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col">
+				<div class="d-flex justify-content-center">
+					<div class="mb-2">
+					<select class="form-control" id="nivel">
+						<option value="">-- Selecione o Nível</option>
+						<option value="normal">Normal</option>
+						<option value="dificil">DIficil</option>
+						<option value="chucknorris">Chuck Norris</option>
+					</select>
+					</div>
+				</div>	
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col">
+				<div class="d-flex justify-content-center">
+				<button type="button" class="btn btn-danger btn-lg" onclick="iniciarJogo()">Iniciar Jogo</button>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>
